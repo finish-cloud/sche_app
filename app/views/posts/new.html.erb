@@ -15,8 +15,9 @@
     <td><%= f.date_field :finish %></td>
   </tr>
   <tr>
-    <th> <%= f.label :date, "終日" %></th>
-    <td> </td>
+    <th><%= f.label :allday, "終日" %></th>
+    <td> <%= f.check_box :allday %><p>終日の場合はチェックを入れてください</p>
+    </td>
   </tr>
   <tr>
     <th> <%= f.label :content, "スケジュールメモ" %></th>

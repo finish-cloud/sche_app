@@ -23,6 +23,6 @@
   <ul>
     <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
     <li><%=  %></li>
-    <li><%= %></li>
+    <li><%= link_to "スケジュールを削除", @post, method: :delete, data: { confirm: "本当に削除しますか？"}%></li>
   </ul>
 </div>
