@@ -25,10 +25,14 @@
       <td><%= post.title %></td>
       <td><%= post.start.strftime("%Y年%m月%d日") %></td>
       <td><%= post.finish.strftime("%Y年%m月%d日") %></td>
-      <td><% post.allday %></td>
+      <% if post.allday == true %>
+      <td> ○ </td>
+      <% else %>
+      <td>　</td>
+      <% end %>
       <td><%= post.updated_at.to_s(:datetime_jp) %></td>
       <td><%= link_to "確認", post %></td>
-      <td><%= %></td>
+      <td><%= link_to "編集", [:edit, post] %></td>
       <td>
         <%= link_to "削除", post, method: :delete, data: { confirm: "本当に削除しますか？"}%>
       </td>

@@ -14,6 +14,14 @@
     <td><%= @post.updated_at.strftime("%Y年%m月%d日") %></td>
   </tr>
   <tr>
+    <th>終日</th>
+    <% if @post.allday == true %>
+    <td> ○ </td>
+    <% else %>
+    <td>　</td>
+    <% end %>
+  </tr>
+  <tr>
     <th>コメント</th>
     <td><%= @post.content %></td>
   </tr>
@@ -22,7 +30,7 @@
 <div>
   <ul>
     <li><%= link_to "スケジュール一覧に戻る", :posts %></li>
-    <li><%=  %></li>
+    <li><%= link_to "スケジュールを編集する", :edit_post %></li>
     <li><%= link_to "スケジュールを削除", @post, method: :delete, data: { confirm: "本当に削除しますか？"}%></li>
   </ul>
 </div>
