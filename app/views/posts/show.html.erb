@@ -7,11 +7,11 @@
   </tr>
   <tr>
     <th>開始日</th>
-    <td><%= @post.start %></td>
+    <td><%= @post.start.strftime("%Y年%m月%d日")  %></td>
   </tr>
   <tr>
     <th>投稿日</th>
-    <td><%= @post.updated_at %></td>
+    <td><%= @post.updated_at.strftime("%Y年%m月%d日") %></td>
   </tr>
   <tr>
     <th>コメント</th>

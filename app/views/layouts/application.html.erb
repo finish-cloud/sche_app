@@ -13,11 +13,11 @@
 
 <body>
   <header>
-    <h1>Ruby on Rails</h1>
+    <h1>Ruby on Rails スケジュール管理アプリ</h1>
   </header>
   <%= yield %>
   <footer>
-    <h1>Hello World!:{#Datetime.now}</h1>
+    <h1>現在の日時 <%= Time.now.strftime('%Y年%m月%d日') %> </h1>
   </footer>
 </body>
 
