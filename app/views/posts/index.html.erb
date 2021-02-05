@@ -7,7 +7,7 @@
       <th>終了日</th>
       <th>終日</th>
       <th>スケジュール更新日</th>
-      <th>作成日</th>
+      <th>確認</th>
     </tr>
   </thead>
   <tbody>
@@ -19,7 +19,9 @@
       <td><%= post.finish %></td>
       <td><%= post.allday %></td>
       <td><%= post.updated_at %></td>
-      <td><%= post.created_at %></td>
+      <td><%= link_to "確認", post %></td>
+      <td><%= %></td>
+      <td><%= %></td>
     </tr>
     <% end %>
   </tbody>
